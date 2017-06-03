@@ -6,6 +6,9 @@ def inspect_number(n) -> bool:
     """
     number_of_divisible_numbers = 0
     comparison_number = 1
+
+    if n is 2:
+        return True
     while comparison_number <= n:
         if n % comparison_number is 0:
             number_of_divisible_numbers += 1
