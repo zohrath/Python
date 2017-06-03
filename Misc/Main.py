@@ -8,7 +8,7 @@ def reverser():
 
     print(''.join(temp))
 
-def checkPrime(n):
+def check_prime(n):
     number_of_divisible_numbers = 0
     comparison_number = 1
     while comparison_number <= n:
