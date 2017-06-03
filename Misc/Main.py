@@ -8,7 +8,12 @@ def reverser():
 
     print(''.join(temp))
 
-def check_prime(n):
+def check_prime(n) -> bool:
+    """
+    Checks if an input is a prime number
+    :param n: The number to check
+    :return: Bool
+    """
     number_of_divisible_numbers = 0
     comparison_number = 1
     while comparison_number <= n:
@@ -20,17 +25,24 @@ def check_prime(n):
             return True
         comparison_number += 1
 
-def find_next_prime(number):
+def find_next_prime(number) -> int:
+    """
+    Finds the next prime after number argument
+    :rtype: Int
+    """
     prime_amount = 0
     x = 1
     while True:
-        if checkPrime(number + x) is True:
+        if check_prime(number + x) is True:
             prime_amount += 1
         if prime_amount is 1:
             return number + x
         x += 1
 
 def prime():
+    """
+    Method to check a range of values y and print all prime numbers contained in the range
+    """
     y = 2
     while True:
         latest = find_next_prime(y)
